@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <style> .title{font:700 16px/1.2 Arial;} .label{font:400 13px/1.2 Arial;} .small{font:400 11px/1.2 Arial; fill:#333}</style>
+  <rect x="10" y="10" width="880" height="400" rx="10" fill="#f7f9fb" stroke="#ddd"/>
+  <text x="30" y="36" class="title">Smart Agriculture — Data Flow</text>
+
+  <!-- Sensors -->
+  <g>
+    <rect x="30" y="60" width="170" height="120" rx="8" fill="#fff" stroke="#9fc5e8"/>
+    <text x="45" y="86" class="label">Field Sensors</text>
+    <text x="45" y="108" class="small">Soil moisture • Temp • EC</text>
+    <text x="45" y="126" class="small">Light • Weather • Cameras</text>
+  </g>
+
+  <!-- Arrow to Edge Gateway -->
+  <line x1="200" y1="120" x2="320" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Edge Gateway -->
+  <g>
+    <rect x="320" y="60" width="200" height="120" rx="8" fill="#fff" stroke="#f6c17d"/>
+    <text x="350" y="90" class="label">Edge Gateway</text>
+    <text x="350" y="112" class="small">Local aggregation • Preprocessing</text>
+    <text x="350" y="130" class="small">Alerting • On-device inference</text>
+  </g>
+
+  <!-- Arrow to Cloud -->
+  <line x1="520" y1="120" x2="650" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Cloud -->
+  <g>
+    <rect x="650" y="40" width="220" height="160" rx="10" fill="#fff" stroke="#b6d7a8"/>
+    <text x="680" y="80" class="label">Cloud / Model Training</text>
+    <text x="680" y="104" class="small">Centralized training • Historical aggregation</text>
+    <text x="680" y="122" class="small">Model updates • Dashboard & API</text>
+  </g>
+
+  <!-- Arrow down to Dashboard -->
+  <line x1="760" y1="200" x2="760" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Dashboard -->
+  <g>
+    <rect x="620" y="260" width="260" height="100" rx="8" fill="#fff" stroke="#c9daf8"/>
+    <text x="650" y="290" class="label">Farmer Dashboard</text>
+    <text x="650" y="310" class="small">Visualizations • Recommendations • Export</text>
+  </g>
+
+  <!-- Arrow back to Edge (model update) -->
+  <line x1="650" y1="200" x2="420" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="194" class="small">Model update (delta)</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#666" />
+    </marker>
+  </defs>
+</svg>
